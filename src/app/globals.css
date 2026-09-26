@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #FFC903;
+  --color-accent: #E11D48;
+  --color-dark: #0A0A0A;
+}
+
+/* Background warna kuning cerah persis sesuai referensi CRISPR */
+.bg-doodle-pattern {
+  background-color: #FFC903;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFC903;
+  color: #0A0A0A;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #0A0A0A;
+  color: #FDB813;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDB813;
+}
+::-webkit-scrollbar-thumb {
+  background: #0A0A0A;
+  border-radius: 9999px;
+  border: 2px solid #FDB813;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E11D48;
+}
+
+/* Utilitas Teks Display Ekstra Tebal Rounded Persis Sesuai Referensi CRISPR */
+.display-title {
+  font-family: var(--font-fredoka), "Fredoka", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+}
+
+/* Efek Text Stroke / Outline Pop */
+.text-stroke-black {
+  -webkit-text-stroke: 2px #0A0A0A;
+}
+
+/* Running Marquee Ticker */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+@keyframes marqueeSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-smooth {
+  animation: marqueeSlide 25s linear infinite;
+}
+
+.animate-marquee-smooth:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
