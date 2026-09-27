@@ -35,3 +35,17 @@ next-env.d.ts
 
 # scratch / temp files
 /scratch/
+
+# Temporary test & debug screenshots
+20260927_*.png
+ffoto-gacoan-favorite.png
+public/images/debug_*
+public/images/live_*
+public/images/preview_*
+public/images/verify-*
+public/images/*_preview.png
+public/images/test_*
+public/images/final_*
+public/images/mobile_test_*
+public/images/full_mobile_mockup_*
+public/images/gacoan-hero-composed.png

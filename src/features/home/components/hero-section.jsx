@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full bg-gacoan-yellow overflow-visible pt-4 pb-0 sm:pb-2 flex flex-col items-center justify-center select-none"
+      className="relative w-full overflow-visible pt-4 pb-0 flex flex-col items-center justify-center select-none"
     >
       {/* GARIS LENGKUNG KUBAH: DI DALAMNYA HANYA BERISI GAMBAR DOODLE MERAH (PERSIS REFERENSI) */}
       <div className="absolute inset-0 pointer-events-none flex items-start justify-center overflow-visible z-0" aria-hidden="true">
@@ -27,66 +27,44 @@ export function HeroSection() {
             strokeLinejoin="round"
           >
             <defs>
-              {/* 1. DOODLE CABAI RAWIT MERAH PEDAS DENGAN LIDAH API */}
-              <g id="gacoan-chili">
-                <path d="M 12 58 C 22 42, 30 20, 62 14 C 50 32, 38 52, 12 58 Z" fill="currentColor" fillOpacity="0.18" />
-                <path d="M 62 14 C 70 6, 80 4, 86 8" strokeWidth="3.2" />
-                <path d="M 10 60 C 4 52, 6 44, 10 40 C 15 44, 18 36, 22 48 Z" fill="currentColor" />
-                <circle cx="16" cy="44" r="2.2" fill="currentColor" />
-                <circle cx="26" cy="64" r="2" fill="currentColor" />
+              <g id="doodle-cup">
+                <line x1="36" y1="18" x2="48" y2="4" strokeWidth="2.6" />
+                <line x1="39" y1="18" x2="51" y2="4" strokeWidth="2.6" />
+                <path d="M 18 26 C 18 10, 52 10, 52 26" strokeWidth="2.6" />
+                <ellipse cx="35" cy="26" rx="19" ry="3.8" strokeWidth="2.2" />
+                <path d="M 17 26 L 19 30 L 51 30 L 53 26" strokeWidth="2.0" />
+                <path d="M 20 30 L 25 64 C 25 66, 45 66, 45 64 L 50 30" strokeWidth="2.6" />
+                <circle cx="28" cy="40" r="1.5" />
+                <circle cx="41" cy="44" r="1.7" />
+                <circle cx="32" cy="52" r="1.4" />
+                <circle cx="42" cy="56" r="1.4" />
               </g>
 
-              {/* 2. DOODLE MANGKOK MIE GACOAN BERUAP + SUMPIT */}
-              <g id="gacoan-noodle">
-                <path d="M 16 42 C 22 75, 66 75, 72 42 Z" fill="currentColor" fillOpacity="0.14" />
-                <path d="M 10 42 C 40 40, 52 40, 78 42" strokeWidth="3.2" />
-                <path d="M 20 40 C 28 26, 34 46, 44 28 C 52 46, 60 26, 66 40" strokeWidth="2.8" />
-                <path d="M 28 40 C 36 28, 42 42, 52 30" strokeWidth="2.5" />
-                <line x1="28" y1="14" x2="80" y2="4" strokeWidth="3.2" />
-                <line x1="30" y1="20" x2="82" y2="10" strokeWidth="3.2" />
-                <path d="M 38 18 C 41 8, 33 6, 36 1" strokeDasharray="3 3" strokeWidth="2.2" />
-                <path d="M 52 16 C 55 7, 47 5, 50 0" strokeDasharray="3 3" strokeWidth="2.2" />
+              <g id="doodle-taco">
+                <path d="M 14 46 C 14 18, 56 16, 56 46 Z" strokeWidth="2.6" />
+                <path d="M 17 40 Q 24 26, 32 36 T 44 32 T 53 38" strokeWidth="2.2" />
+                <circle cx="26" cy="32" r="1.8" fill="currentColor" stroke="none" />
+                <circle cx="39" cy="29" r="1.8" fill="currentColor" stroke="none" />
+                <circle cx="46" cy="35" r="1.6" fill="currentColor" stroke="none" />
               </g>
 
-              {/* 3. DOODLE PANGSIT GORENG MEKAR (CRISPY WONTON) */}
-              <g id="gacoan-wonton">
-                <path d="M 40 10 C 26 30, 14 46, 8 62 C 20 54, 30 64, 40 56 C 50 64, 60 54, 72 62 C 66 46, 54 30, 40 10 Z" fill="currentColor" fillOpacity="0.2" />
-                <path d="M 40 10 C 34 32, 28 44, 25 58" strokeWidth="2.8" />
-                <path d="M 40 10 C 44 32, 50 44, 55 58" strokeWidth="2.8" />
-                <circle cx="24" cy="46" r="2.2" fill="currentColor" />
-                <circle cx="56" cy="46" r="2.2" fill="currentColor" />
+              <g id="doodle-fries">
+                <path d="M 19 34 L 24 64 L 46 64 L 51 34 Z" strokeWidth="2.6" />
+                <path d="M 19 34 C 27 40, 43 40, 51 34" strokeWidth="2.2" />
+                <rect x="23" y="18" width="4.5" height="18" rx="0.8" transform="rotate(-15 25 25)" strokeWidth="2.0" />
+                <rect x="29" y="12" width="5.0" height="24" rx="0.8" transform="rotate(-5 31 22)" strokeWidth="2.0" />
+                <rect x="35" y="10" width="5.0" height="26" rx="0.8" transform="rotate(4 37 22)" strokeWidth="2.0" />
+                <rect x="42" y="15" width="4.5" height="22" rx="0.8" transform="rotate(14 44 24)" strokeWidth="2.0" />
               </g>
 
-              {/* 4. DOODLE GELAS ES GASTONOMIS (ES GOBAK SODOR / ES TEKLEK) */}
-              <g id="gacoan-drink">
-                <path d="M 22 28 L 30 76 C 31 82, 57 82, 58 76 L 66 28 Z" fill="currentColor" fillOpacity="0.16" />
-                <path d="M 18 28 C 40 25, 48 25, 70 28" strokeWidth="3.2" />
-                <line x1="48" y1="28" x2="62" y2="6" strokeWidth="3.2" />
-                <line x1="62" y1="6" x2="74" y2="10" strokeWidth="3.2" />
-                <rect x="28" y="36" width="14" height="14" rx="3" strokeWidth="2.2" />
-                <rect x="46" y="52" width="14" height="14" rx="3" strokeWidth="2.2" />
-                <circle cx="38" cy="65" r="2.8" fill="currentColor" />
-                <circle cx="56" cy="38" r="2.8" fill="currentColor" />
-              </g>
-
-              {/* 5. DOODLE DIMSUM UDANG KEJU / SIOMAY MONTOK */}
-              <g id="gacoan-dimsum">
-                <path d="M 18 36 C 20 14, 52 12, 64 28 C 76 44, 64 66, 48 66 C 28 66, 16 52, 18 36 Z" fill="currentColor" fillOpacity="0.16" />
-                <path d="M 36 58 C 42 70, 50 70, 54 58" strokeWidth="3" />
-                <circle cx="44" cy="28" r="2.8" fill="currentColor" />
-                <circle cx="54" cy="38" r="2.5" fill="currentColor" />
-                <circle cx="32" cy="42" r="2.2" fill="currentColor" />
-              </g>
-
-              {/* 6. DOODLE LIDAH API / FLAME LEVEL PEDAS */}
-              <g id="gacoan-flame">
-                <path d="M 28 68 C 14 52, 20 34, 26 26 C 30 36, 38 24, 44 12 C 52 26, 62 18, 58 38 C 66 32, 68 52, 56 62 C 48 68, 38 70, 28 68 Z" fill="currentColor" fillOpacity="0.2" />
-                <circle cx="42" cy="44" r="2.5" fill="currentColor" />
-              </g>
-
-              {/* 7. DOODLE BINTANG KRIUK / SPARK PEDAS */}
-              <g id="gacoan-spark">
-                <path d="M 18 4 C 20 14, 25 16, 32 18 C 25 20, 20 22, 18 32 C 16 22, 11 20, 4 18 C 11 16, 16 14, 18 4 Z" fill="currentColor" opacity="0.9" />
+              <g id="doodle-burger">
+                <path d="M 15 26 C 17 12, 53 12, 55 26 Z" strokeWidth="2.6" />
+                <ellipse cx="26" cy="18" rx="1.4" ry="0.8" transform="rotate(-15 26 18)" fill="currentColor" stroke="none" />
+                <ellipse cx="35" cy="15" rx="1.4" ry="0.8" transform="rotate(10 35 15)" fill="currentColor" stroke="none" />
+                <ellipse cx="44" cy="17" rx="1.4" ry="0.8" transform="rotate(20 44 17)" fill="currentColor" stroke="none" />
+                <path d="M 13 28 Q 18 24, 24 28 T 35 28 T 46 28 T 57 28" strokeWidth="2.0" />
+                <rect x="15" y="31" width="40" height="7" rx="3.5" strokeWidth="2.2" />
+                <path d="M 18 40 C 20 48, 50 48, 52 40 Z" strokeWidth="2.4" />
               </g>
 
               <clipPath id="arch-clip">
@@ -94,109 +72,412 @@ export function HeroSection() {
               </clipPath>
             </defs>
 
-            {/* HANYA DOODLE MERAH DI DALAM KUBAH & TERPOTONG OLEH GARIS BATAS KUBAH */}
-            <g clipPath="url(#arch-clip)" className="text-red-600 opacity-60">
-              {/* SISI KIRI - ELEMEN MENEMPEL & TERPOTONG GARIS */}
-              <use href="#gacoan-chili" x="225" y="10" transform="rotate(-30 225 10) scale(1.0)" />
-              <use href="#gacoan-noodle" x="145" y="55" transform="rotate(15 145 55) scale(1.0)" />
-              <use href="#gacoan-wonton" x="65" y="125" transform="rotate(-20 65 125) scale(1.05)" />
-              <use href="#gacoan-dimsum" x="10" y="210" transform="rotate(16 10 210) scale(1.0)" />
-              <use href="#gacoan-drink" x="-18" y="290" transform="rotate(-12 -18 290) scale(1.05)" />
-              <use href="#gacoan-chili" x="-22" y="370" transform="rotate(22 -22 370) scale(1.1)" />
-              <use href="#gacoan-noodle" x="-25" y="450" transform="rotate(-10 -25 450) scale(1.05)" />
-              <use href="#gacoan-wonton" x="-22" y="530" transform="rotate(18 -22 530) scale(1.1)" />
-              <use href="#gacoan-dimsum" x="-20" y="610" transform="rotate(-15 -20 610) scale(1.05)" />
-              <use href="#gacoan-drink" x="-22" y="690" transform="rotate(14 -22 690) scale(1.0)" />
-              <use href="#gacoan-chili" x="-18" y="770" transform="rotate(-18 -18 770) scale(1.05)" />
-
-              {/* SISI KIRI - LAPISAN DALAM */}
-              <use href="#gacoan-spark" x="90" y="105" transform="scale(0.95)" />
-              <use href="#gacoan-flame" x="75" y="175" transform="rotate(15 75 175) scale(0.9)" />
-              <use href="#gacoan-spark" x="155" y="160" transform="scale(0.85)" />
-              <use href="#gacoan-chili" x="80" y="250" transform="rotate(12 80 250) scale(0.95)" />
-              <use href="#gacoan-spark" x="160" y="235" transform="scale(0.85)" />
-              <use href="#gacoan-wonton" x="75" y="335" transform="rotate(-15 75 335) scale(0.95)" />
-              <use href="#gacoan-chili" x="150" y="315" transform="rotate(20 150 315) scale(0.9)" />
-              <use href="#gacoan-dimsum" x="80" y="415" transform="rotate(18 80 415) scale(0.9)" />
-              <use href="#gacoan-flame" x="155" y="395" transform="rotate(-12 155 395) scale(0.85)" />
-              <use href="#gacoan-drink" x="75" y="495" transform="rotate(-14 75 495) scale(0.95)" />
-              <use href="#gacoan-spark" x="150" y="475" transform="scale(0.85)" />
-              <use href="#gacoan-noodle" x="75" y="575" transform="rotate(12 75 575) scale(0.95)" />
-              <use href="#gacoan-dimsum" x="145" y="555" transform="rotate(15 145 555) scale(0.85)" />
-              <use href="#gacoan-chili" x="75" y="660" transform="rotate(-20 75 660) scale(1.0)" />
-              <use href="#gacoan-wonton" x="150" y="635" transform="rotate(-16 150 635) scale(0.85)" />
-              <use href="#gacoan-flame" x="75" y="740" transform="rotate(15 75 740) scale(0.9)" />
-              <use href="#gacoan-noodle" x="145" y="715" transform="rotate(10 145 715) scale(0.85)" />
-              <use href="#gacoan-spark" x="80" y="820" transform="scale(0.95)" />
-
-              {/* SISI KANAN - ELEMEN MENEMPEL & TERPOTONG GARIS */}
-              <use href="#gacoan-wonton" x="575" y="10" transform="rotate(25 575 10) scale(1.0)" />
-              <use href="#gacoan-dimsum" x="655" y="55" transform="rotate(-15 655 55) scale(1.0)" />
-              <use href="#gacoan-drink" x="730" y="125" transform="rotate(18 730 125) scale(1.05)" />
-              <use href="#gacoan-chili" x="780" y="210" transform="rotate(-20 780 210) scale(1.1)" />
-              <use href="#gacoan-noodle" x="810" y="290" transform="rotate(12 810 290) scale(1.05)" />
-              <use href="#gacoan-wonton" x="820" y="370" transform="rotate(-16 820 370) scale(1.1)" />
-              <use href="#gacoan-dimsum" x="820" y="450" transform="rotate(14 820 450) scale(1.05)" />
-              <use href="#gacoan-drink" x="820" y="530" transform="rotate(-15 820 530) scale(1.0)" />
-              <use href="#gacoan-chili" x="820" y="610" transform="rotate(22 820 610) scale(1.1)" />
-              <use href="#gacoan-noodle" x="820" y="690" transform="rotate(-12 820 690) scale(1.05)" />
-              <use href="#gacoan-wonton" x="820" y="770" transform="rotate(16 820 770) scale(1.05)" />
-
-              {/* SISI KANAN - LAPISAN DALAM */}
-              <use href="#gacoan-spark" x="715" y="105" transform="scale(0.95)" />
-              <use href="#gacoan-flame" x="710" y="175" transform="rotate(-14 710 175) scale(0.9)" />
-              <use href="#gacoan-spark" x="645" y="160" transform="scale(0.85)" />
-              <use href="#gacoan-noodle" x="710" y="250" transform="rotate(-12 710 250) scale(0.95)" />
-              <use href="#gacoan-spark" x="640" y="235" transform="scale(0.85)" />
-              <use href="#gacoan-dimsum" x="715" y="335" transform="rotate(16 715 335) scale(0.9)" />
-              <use href="#gacoan-flame" x="645" y="315" transform="rotate(-15 645 315) scale(0.85)" />
-              <use href="#gacoan-chili" x="710" y="415" transform="rotate(-18 710 415) scale(0.95)" />
-              <use href="#gacoan-spark" x="640" y="395" transform="scale(0.85)" />
-              <use href="#gacoan-wonton" x="710" y="495" transform="rotate(15 710 495) scale(0.95)" />
-              <use href="#gacoan-flame" x="645" y="475" transform="rotate(16 645 475) scale(0.85)" />
-              <use href="#gacoan-flame" x="715" y="575" transform="rotate(-16 715 575) scale(0.9)" />
-              <use href="#gacoan-chili" x="645" y="555" transform="rotate(-14 645 555) scale(0.85)" />
-              <use href="#gacoan-drink" x="710" y="660" transform="rotate(14 710 660) scale(0.95)" />
-              <use href="#gacoan-noodle" x="640" y="635" transform="rotate(12 640 635) scale(0.85)" />
-              <use href="#gacoan-dimsum" x="710" y="740" transform="rotate(-12 710 740) scale(0.9)" />
-              <use href="#gacoan-wonton" x="645" y="715" transform="rotate(-18 645 715) scale(0.85)" />
-              <use href="#gacoan-spark" x="715" y="820" transform="scale(0.95)" />
-
-              {/* PUNCAK KUBAH */}
-              <use href="#gacoan-flame" x="395" y="-15" transform="rotate(10 395 -15) scale(1.1)" />
-              <use href="#gacoan-chili" x="450" y="-12" transform="rotate(-15 450 -12) scale(1.05)" />
-              <use href="#gacoan-wonton" x="330" y="15" transform="rotate(-18 330 15) scale(0.95)" />
-              <use href="#gacoan-dimsum" x="490" y="18" transform="rotate(16 490 18) scale(0.95)" />
-              <use href="#gacoan-spark" x="415" y="38" transform="scale(1.0)" />
-              <use href="#gacoan-noodle" x="250" y="40" transform="rotate(14 250 40) scale(0.95)" />
-              <use href="#gacoan-drink" x="565" y="35" transform="rotate(-12 565 35) scale(0.95)" />
-
-              {/* TENGAH BELAKANG MAKANAN */}
-              <use href="#gacoan-chili" x="210" y="85" transform="rotate(-20 210 85) scale(0.85)" />
-              <use href="#gacoan-dimsum" x="285" y="80" transform="rotate(14 285 80) scale(0.85)" />
-              <use href="#gacoan-spark" x="360" y="75" transform="scale(0.85)" />
-              <use href="#gacoan-flame" x="425" y="72" transform="rotate(-12 425 72) scale(0.85)" />
-              <use href="#gacoan-wonton" x="485" y="75" transform="rotate(18 485 75) scale(0.85)" />
-              <use href="#gacoan-chili" x="560" y="80" transform="rotate(-15 560 80) scale(0.85)" />
-              <use href="#gacoan-spark" x="625" y="85" transform="scale(0.85)" />
-
-              <use href="#gacoan-spark" x="220" y="155" transform="scale(0.85)" />
-              <use href="#gacoan-chili" x="285" y="145" transform="rotate(-12 285 145) scale(0.8)" />
-              <use href="#gacoan-wonton" x="355" y="140" transform="rotate(18 355 140) scale(0.75)" />
-              <use href="#gacoan-flame" x="425" y="135" transform="rotate(16 425 135) scale(0.8)" />
-              <use href="#gacoan-dimsum" x="490" y="140" transform="rotate(-15 490 140) scale(0.8)" />
-              <use href="#gacoan-chili" x="555" y="145" transform="rotate(14 555 145) scale(0.8)" />
-              <use href="#gacoan-spark" x="620" y="155" transform="scale(0.85)" />
-
-              {/* Biji Cabai Mikro */}
-              <circle cx="120" cy="180" r="2.5" fill="currentColor" />
-              <circle cx="120" cy="360" r="2.5" fill="currentColor" />
-              <circle cx="120" cy="540" r="2.5" fill="currentColor" />
-              <circle cx="120" cy="720" r="2.5" fill="currentColor" />
-              <circle cx="675" cy="180" r="2.5" fill="currentColor" />
-              <circle cx="675" cy="360" r="2.5" fill="currentColor" />
-              <circle cx="675" cy="540" r="2.5" fill="currentColor" />
-              <circle cx="675" cy="720" r="2.5" fill="currentColor" />
+            <g clipPath="url(#arch-clip)" className="text-[#E02810] opacity-75">
+              <g transform="translate(256, 32) rotate(15) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(325, 26) rotate(-18) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(397, 33) rotate(24) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(473, 32) rotate(12) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(550, 34) rotate(12) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(626, 34) rotate(6) scale(1.02)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(143, 95) rotate(15) scale(1.02)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(212, 100) rotate(18) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(291, 101) rotate(15) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(361, 94) rotate(15) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(440, 96) rotate(-6) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(514, 101) rotate(-15) scale(1.02)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(585, 102) rotate(18) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(658, 98) rotate(-24) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(731, 101) rotate(12) scale(0.98)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(107, 168) rotate(6) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(181, 163) rotate(-15) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(255, 164) rotate(24) scale(0.94)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(326, 169) rotate(-18) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(402, 164) rotate(-24) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(470, 169) rotate(15) scale(0.98)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(547, 163) rotate(-15) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(623, 164) rotate(12) scale(1.02)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(694, 170) rotate(24) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(774, 166) rotate(18) scale(0.98)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(65, 234) rotate(18) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(145, 233) rotate(-24) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(217, 231) rotate(12) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(285, 230) rotate(12) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(366, 235) rotate(24) scale(1.02)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(435, 232) rotate(18) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(514, 233) rotate(-15) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(581, 233) rotate(-24) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(662, 233) rotate(-24) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(737, 233) rotate(-12) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(809, 234) rotate(-15) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(27, 304) rotate(-12) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(102, 302) rotate(24) scale(1.02)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(178, 305) rotate(12) scale(1.02)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(255, 299) rotate(-18) scale(0.98)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(325, 298) rotate(24) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(402, 306) rotate(-24) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(472, 303) rotate(-18) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(552, 301) rotate(15) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(626, 300) rotate(6) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(698, 300) rotate(-24) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(768, 299) rotate(6) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(67, 371) rotate(6) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(138, 366) rotate(6) scale(1.02)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(211, 366) rotate(-6) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(289, 367) rotate(-15) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(364, 373) rotate(18) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(436, 373) rotate(-18) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(515, 370) rotate(6) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(581, 372) rotate(6) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(659, 367) rotate(18) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(729, 374) rotate(-6) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(804, 368) rotate(-18) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(28, 442) rotate(15) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(100, 440) rotate(12) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(180, 440) rotate(18) scale(0.98)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(250, 436) rotate(-15) scale(1.02)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(326, 436) rotate(-24) scale(0.94)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(400, 442) rotate(18) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(475, 436) rotate(-12) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(552, 438) rotate(-15) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(618, 434) rotate(24) scale(0.94)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(695, 442) rotate(18) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(769, 442) rotate(12) scale(0.98)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(68, 507) rotate(24) scale(1.02)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(141, 505) rotate(18) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(218, 502) rotate(-15) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(285, 504) rotate(6) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(367, 506) rotate(-18) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(441, 505) rotate(15) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(513, 508) rotate(-15) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(582, 504) rotate(12) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(659, 502) rotate(-12) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(733, 510) rotate(12) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(809, 505) rotate(15) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(32, 575) rotate(-15) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(102, 575) rotate(-12) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(175, 578) rotate(12) scale(0.94)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(253, 574) rotate(-15) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(325, 572) rotate(12) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(397, 571) rotate(6) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(471, 575) rotate(24) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(552, 578) rotate(12) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(623, 571) rotate(-18) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(696, 574) rotate(-12) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(772, 578) rotate(12) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(69, 643) rotate(-6) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(140, 643) rotate(18) scale(1.02)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(214, 640) rotate(15) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(291, 642) rotate(-18) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(363, 645) rotate(-12) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(436, 643) rotate(-15) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(511, 642) rotate(18) scale(1.02)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(581, 646) rotate(18) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(656, 645) rotate(18) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(734, 638) rotate(-12) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(807, 646) rotate(-12) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(32, 713) rotate(12) scale(0.94)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(100, 709) rotate(6) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(174, 709) rotate(-15) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(253, 707) rotate(-15) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(323, 708) rotate(-6) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(399, 708) rotate(-18) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(478, 714) rotate(-18) scale(0.94)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(548, 712) rotate(-12) scale(0.98)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(625, 711) rotate(12) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(699, 710) rotate(12) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(766, 713) rotate(-24) scale(1.02)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(68, 778) rotate(-6) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(141, 782) rotate(6) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(211, 780) rotate(-15) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(292, 775) rotate(24) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(364, 779) rotate(-18) scale(0.98)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(437, 782) rotate(-18) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(507, 781) rotate(-6) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(589, 782) rotate(-15) scale(0.98)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(659, 781) rotate(-15) scale(1.0)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(734, 780) rotate(-12) scale(0.98)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(805, 776) rotate(-24) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(30, 844) rotate(6) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(102, 849) rotate(-12) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(176, 844) rotate(15) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(256, 842) rotate(-6) scale(1.0)">
+                <use href="#doodle-cup" x="-35" y="-35" />
+              </g>
+              <g transform="translate(330, 843) rotate(18) scale(0.98)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(401, 844) rotate(24) scale(0.94)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(470, 843) rotate(15) scale(1.0)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(549, 842) rotate(-15) scale(0.98)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
+              <g transform="translate(619, 848) rotate(-6) scale(0.98)">
+                <use href="#doodle-taco" x="-35" y="-35" />
+              </g>
+              <g transform="translate(695, 845) rotate(-6) scale(1.0)">
+                <use href="#doodle-fries" x="-35" y="-35" />
+              </g>
+              <g transform="translate(768, 850) rotate(18) scale(1.02)">
+                <use href="#doodle-burger" x="-35" y="-35" />
+              </g>
             </g>
           </svg>
         </div>
@@ -209,32 +490,32 @@ export function HeroSection() {
         <div className="relative w-full text-center z-10 pt-2 sm:pt-4 md:pt-6">
           <h1
             style={{ fontFamily: "var(--font-fredoka), 'Fredoka', cursive, sans-serif" }}
-            className="font-bold text-[28px] min-[360px]:text-[32px] min-[400px]:text-[35px] sm:text-[62px] md:text-[86px] lg:text-[112px] uppercase tracking-tight text-black leading-[0.88] select-none"
+            className="font-bold text-[22px] min-[360px]:text-[26px] min-[400px]:text-[30px] sm:text-[52px] md:text-[68px] lg:text-[86px] uppercase tracking-tight text-black leading-[0.88] select-none"
           >
             <span className="block whitespace-nowrap">PEDAS GURIH, CRISPY</span>
             <span className="block whitespace-nowrap">MIE GACOAN MENU</span>
           </h1>
         </div>
 
-        {/* LAYER 2 (DEPAN): FOTO PIRING MIE GACOAN - NAIK TINGGI MENUTUPI BARIS KEDUA TEKS MENU */}
-        <div className="relative w-full max-w-sm min-[400px]:max-w-md sm:max-w-3xl md:max-w-4xl lg:max-w-[920px] aspect-square -mt-[85px] min-[375px]:-mt-[95px] min-[410px]:-mt-[110px] sm:-mt-[180px] md:-mt-[250px] lg:-mt-[330px] z-20 flex items-center justify-center">
+        {/* LAYER 2 (DEPAN): FOTO PIRING MIE GACOAN - NAIK MENUTUPI BARIS KEDUA TEKS MENU */}
+        <div className="relative w-full max-w-sm min-[400px]:max-w-md sm:max-w-2xl md:max-w-2xl lg:max-w-[720px] aspect-square -mt-[62px] min-[375px]:-mt-[70px] min-[410px]:-mt-[80px] sm:-mt-[150px] md:-mt-[180px] lg:-mt-[215px] z-20 flex items-center justify-center">
           
           {/* Bayangan Halus Realistis di Bawah Piring */}
           <div
-            className="absolute bottom-4 sm:bottom-8 lg:bottom-12 w-[85%] h-12 sm:h-18 lg:h-24 bg-black/35 rounded-full blur-2xl transform rotate-[-2deg] -z-10"
+            className="absolute bottom-4 sm:bottom-8 lg:bottom-10 w-[85%] h-12 sm:h-18 lg:h-20 bg-black/35 rounded-full blur-2xl transform rotate-[-2deg] -z-10"
             aria-hidden="true"
           />
 
-          {/* Gambar Piring Mie Gacoan Naik Menutupi Sebagian Teks Menu (Persis Burger di Referensi) */}
-          <div className="relative w-full h-full flex items-center justify-center scale-110 min-[400px]:scale-115 sm:scale-120 md:scale-125 lg:scale-125 hover:scale-[1.28] transition-transform duration-500">
+          {/* Gambar Piring Mie Gacoan Naik Menutupi Sebagian Teks Menu (Proporsional di Layar Laptop & Mobile) */}
+          <div className="relative w-full h-full flex items-center justify-center scale-105 min-[400px]:scale-110 sm:scale-105 md:scale-105 lg:scale-105 hover:scale-[1.08] transition-transform duration-500">
             <Image
               src="/images/gacoan-hero.png"
               alt="Mie Gacoan Cikarang Komplit dengan Pangsit Goreng Mekar"
               fill
               priority
               quality={100}
-              className="object-contain object-center drop-shadow-[0_28px_35px_rgba(0,0,0,0.38)]"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 95vw, 1000px"
+              className="object-contain object-center drop-shadow-[0_24px_30px_rgba(0,0,0,0.35)]"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 800px"
             />
           </div>
 

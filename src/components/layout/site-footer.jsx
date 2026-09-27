@@ -1,68 +1,71 @@
 "use client";
 
 import React from "react";
-import { Flame } from "lucide-react";
+import Image from "next/image";
 
 export function SiteFooter() {
   return (
-    <footer className="relative w-full bg-gacoan-yellow pt-10 sm:pt-14 md:pt-16 pb-6 sm:pb-8 px-5 sm:px-8 md:px-10 select-none">
-      {/* 1. Baris Atas: Slogan Kiri (Fredoka Bold) & 3 Kolom Tautan Navigasi Kanan (Persis Referensi CRISPR) */}
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-10">
-        {/* Slogan Kiri */}
+    <footer className="relative w-full pt-10 sm:pt-14 md:pt-16 pb-6 sm:pb-8 px-2 sm:px-6 md:px-8 select-none">
+      {/* 1. Baris Atas: Slogan Kiri & 3 Kolom Tautan Navigasi Kanan (Persis Referensi CRISPR tetapi Disesuaikan Mie Gacoan) */}
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-10">
+        {/* Slogan Kiri: 2 Baris Huruf Besar Fredoka Black */}
         <div className="max-w-xs sm:max-w-sm">
           <h2
             style={{ fontFamily: "var(--font-fredoka), 'Fredoka', cursive, sans-serif" }}
-            className="font-bold text-2xl sm:text-3xl md:text-[34px] uppercase tracking-[-0.015em] text-black leading-[0.95]"
+            className="font-black text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] uppercase tracking-[-0.015em] text-black leading-[1.05]"
           >
             PEDAS GURIH, SENSASI <br />
             JUARA, SETIAP SAAT.
           </h2>
-          <p className="mt-3 text-xs font-semibold text-neutral-800 leading-relaxed">
-            Sensasi kuliner mie pedas nomor satu di Indonesia. Diracik segar dengan level pedas legendaris dan pangsit mekar renyah di Cikarang.
-          </p>
         </div>
 
         {/* 3 Kolom Links Navigasi */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 w-full md:w-auto">
-          {/* Kolom 1: Menu Favorit */}
+        <div className="grid grid-cols-3 gap-3 sm:gap-8 md:gap-12 w-full lg:w-auto">
+          {/* Kolom 1: Menu Mie Gacoan */}
           <div className="flex flex-col space-y-2 text-xs sm:text-sm font-bold text-black">
-            <a href="#highlight" className="hover:text-red-600 transition-colors">Mie Gacoan</a>
-            <a href="#highlight" className="hover:text-red-600 transition-colors">Mie Hompimpa</a>
-            <a href="#menu" className="hover:text-red-600 transition-colors">Udang Keju</a>
-            <a href="#menu" className="hover:text-red-600 transition-colors">Pangsit Mekar</a>
-            <a href="#menu" className="hover:text-red-600 transition-colors">Es Gobak Sodor</a>
+            <a href="#highlight" className="hover:opacity-70 transition-opacity">Mie Gacoan</a>
+            <a href="#highlight" className="hover:opacity-70 transition-opacity">Mie Hompimpa</a>
+            <a href="#highlight" className="hover:opacity-70 transition-opacity">Udang Keju</a>
+            <a href="#highlight" className="hover:opacity-70 transition-opacity">Pangsit Goreng</a>
+            <a href="#indulgence" className="hover:opacity-70 transition-opacity">Es Gobak Sodor</a>
           </div>
 
-          {/* Kolom 2: Informasi & Outlet */}
+          {/* Kolom 2: Informasi & Layanan */}
           <div className="flex flex-col space-y-2 text-xs sm:text-sm font-bold text-black">
-            <a href="#story" className="hover:text-red-600 transition-colors">Tentang Kami</a>
-            <a href="#outlets" className="hover:text-red-600 transition-colors">Outlet Cikarang</a>
-            <a href="#hero" className="hover:text-red-600 transition-colors">100% Halal MUI</a>
-            <a href="#hero" className="hover:text-red-600 transition-colors">Syarat & Ketentuan</a>
-            <a href="#hero" className="hover:text-red-600 transition-colors">Kebijakan Privasi</a>
+            <a href="#stories" className="hover:opacity-70 transition-opacity">Tentang Kami</a>
+            <a href="#hero" className="hover:opacity-70 transition-opacity">Outlet Cikarang</a>
+            <a href="#hero" className="hover:opacity-70 transition-opacity">100% Halal MUI</a>
+            <a href="#hero" className="hover:opacity-70 transition-opacity">Syarat &amp; Ketentuan</a>
+            <a href="#hero" className="hover:opacity-70 transition-opacity">Kebijakan Privasi</a>
           </div>
 
           {/* Kolom 3: Media Sosial */}
-          <div className="flex flex-col space-y-2 text-xs sm:text-sm font-bold text-black col-span-2 sm:col-span-1">
-            <a href="https://instagram.com/mie.gacoan" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">Facebook</a>
-            <a href="https://instagram.com/mie.gacoan" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">Instagram</a>
-            <a href="https://twitter.com/mie_gacoan" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">Twitter (X)</a>
-            <a href="https://tiktok.com/@mie.gacoan" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">TikTok</a>
+          <div className="flex flex-col space-y-2 text-xs sm:text-sm font-bold text-black">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Facebook</a>
+            <a href="https://instagram.com/mie.gacoan" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Instagram</a>
+            <a href="https://twitter.com/mie_gacoan" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Twitter (X)</a>
+            <a href="https://tiktok.com/@mie.gacoan" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">TikTok</a>
           </div>
         </div>
       </div>
 
-      {/* 2. Baris Bawah: Typography Raksasa Wordmark "GACOAN" + Ikon Hitam Solid Sesuai Referensi CRISPR */}
-      <div className="mt-8 sm:mt-12 md:mt-16 flex items-center gap-3 sm:gap-6 w-full overflow-hidden">
-        {/* Solid Black Icon persis referensi CRISPR */}
-        <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-2xl sm:rounded-3xl bg-black flex items-center justify-center shrink-0 shadow-pop">
-          <Flame className="w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 fill-white text-white" />
+      {/* 2. Baris Bawah: Typography Raksasa Wordmark "GACOAN" + Logo MIE Hitam Transparan */}
+      <div className="mt-8 sm:mt-12 md:mt-16 flex items-center gap-2 sm:gap-4 md:gap-5 w-full overflow-hidden">
+        {/* Logo MIE Asli dengan Warna Hitam & Teks Putih Berlatar Transparan */}
+        <div className="shrink-0 flex items-center justify-center">
+          <Image
+            src="/images/logo-mie-black.png"
+            alt="Logo Mie Gacoan"
+            width={760}
+            height={684}
+            className="h-12 min-[360px]:h-14 min-[400px]:h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain select-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
+          />
         </div>
 
         {/* Wordmark Raksasa GACOAN */}
         <h1
           style={{ fontFamily: "var(--font-fredoka), 'Fredoka', cursive, sans-serif" }}
-          className="font-bold text-[52px] sm:text-[80px] md:text-[102px] lg:text-[118px] uppercase text-black leading-none tracking-tight select-none"
+          className="font-black text-[48px] min-[360px]:text-[58px] min-[400px]:text-[68px] sm:text-[100px] md:text-[132px] lg:text-[160px] uppercase text-black leading-none tracking-tight select-none"
         >
           GACOAN
         </h1>

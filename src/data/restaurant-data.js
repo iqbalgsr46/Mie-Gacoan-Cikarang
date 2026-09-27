@@ -39,10 +39,7 @@ export const restaurantInfo = {
 export const navLinks = [
   { name: "Beranda", href: "#hero" },
   { name: "Menu Favorit", href: "#highlight" },
-  { name: "Daftar Menu", href: "#menu" },
-  { name: "Spesial Kombo", href: "#indulgence" },
   { name: "Cerita Rasa", href: "#stories" },
-  { name: "Lokasi Outlet", href: "#outlets" },
 ];
 
 export const biteIntoHappinessItems = [
@@ -67,23 +64,23 @@ export const highlightCards = [
   {
     id: "mie-gacoan",
     tag: "GACOAN",
-    title: "GACOAN",
+    title: "MIE GACOAN",
     subtitle: "MANIS GURIH PEDAS",
-    image: "/images/card-gacoan-final.png",
+    image: "/images/card-gacoan-new.png",
   },
   {
     id: "mie-hompimpa",
     tag: "HOMPIMPA",
-    title: "HOMPIMPA",
+    title: "MIE HOMPIMPA",
     subtitle: "ASIN GURIH PEDAS",
-    image: "/images/card-hompimpa-final.png",
+    image: "/images/card-hompimpa-new.png",
   },
   {
     id: "udang-keju",
     tag: "UDANG KEJU",
     title: "UDANG KEJU",
     subtitle: "LUMER & RENYAH",
-    image: "/images/card-udang-keju-final.png",
+    image: "/images/card-udang-keju-new.png",
   },
 ];
 

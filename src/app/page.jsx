@@ -8,9 +8,7 @@ import { OrderModal } from "@/components/ui/order-modal";
 import { HeroSection } from "@/features/home/components/hero-section";
 import { FeaturedShowcaseSection } from "@/features/home/components/featured-showcase-section";
 import { IndulgenceComboSection } from "@/features/home/components/indulgence-combo-section";
-import { MenuCatalogSection } from "@/features/home/components/menu-catalog-section";
 import { StoryCommunitySection } from "@/features/home/components/story-community-section";
-import { OutletLocationSection } from "@/features/home/components/outlet-location-section";
 import { marqueeItems, biteIntoHappinessItems } from "@/data/restaurant-data";
 
 export default function HomePage() {
@@ -43,7 +41,7 @@ export default function HomePage() {
         </div>
 
         {/* 3.1 Running Marquee Ticker 1 (BITE INTO HAPPINESS) Miring & Bergambar Mie Gacoan */}
-        <div className="relative z-20 -mt-6 sm:-mt-10 md:-mt-12 mb-4 sm:mb-8">
+        <div className="relative z-20 -mt-14 min-[400px]:-mt-18 sm:-mt-24 md:-mt-32 lg:-mt-36 mb-2 sm:mb-4">
           <MarqueeBanner
             items={biteIntoHappinessItems}
             speed="normal"
@@ -52,55 +50,43 @@ export default function HomePage() {
           />
         </div>
 
-        {/* 3.2 Featured 3-Column Showcase Cards ("DARI LEVEL 0 SAMPAI LEVEL 8") */}
+        {/* 3.2 Featured 3-Column Showcase Cards */}
         <div className="relative z-10">
           <FeaturedShowcaseSection onOpenOrder={handleOpenOrder} />
         </div>
 
-        {/* 3.3 Indulgence Combo Feature ("KOMBO PALING DIBURU DI CIKARANG") */}
+        {/* 3.3 Indulgence Combo Section ("YOUR FAVORITE INDULGENCE" Sesuai Gambar 1) */}
         <div className="relative z-10">
-          <IndulgenceComboSection onOpenOrder={handleOpenOrder} />
+          <IndulgenceComboSection />
         </div>
 
-        {/* 3.4 Running Marquee Ticker 2 (Reverse Direction) Miring & Bergambar Mie Gacoan */}
-        <div className="relative z-20 my-4 sm:my-8">
+        {/* 3.4 Running Marquee Ticker 2 (Reverse Direction) Miring Berlawanan */}
+        <div className="relative z-20 -mt-6 sm:-mt-12 md:-mt-16 mb-4 sm:mb-8">
           <MarqueeBanner
             items={marqueeItems}
             reverse={true}
             speed="slow"
             tilt={true}
+            tiltReverse={true}
             imageSrc="/images/gacoan-hero.png"
             className="bg-neutral-950"
           />
         </div>
 
-        {/* 3.5 Full Interactive Menu Catalog & Spicy Level Guide */}
-        <div className="relative z-10">
-          <MenuCatalogSection onOpenOrder={handleOpenOrder} />
-        </div>
-
-        {/* 3.6 Story & Social Proof ("CERITA SERU DI TIAP SUAPAN") */}
+        {/* 3.5 Story Community Section ("EVERY BURGER TELLS A STORY" Sesuai Referensi) */}
         <div className="relative z-10">
           <StoryCommunitySection />
         </div>
 
-        {/* 3.7 Verified Cikarang Outlet Locations & Maps */}
-        <div className="relative z-10">
-          <OutletLocationSection />
-        </div>
-
-        {/* 3.8 Mega Footer: Dibingkai garis vertikal 860px dan ditutup garis horizontal bawah */}
+        {/* 3.6 Mega Footer */}
         <div className="relative z-10 w-[340px] sm:w-[540px] md:w-[720px] lg:w-[860px] mx-auto border-b-[1.5px] border-orange-500/40">
           <SiteFooter />
         </div>
       </div>
 
-      {/* 4. Sub-footer Copyright di Luar Garis Bingkai Bawah Sesuai Referensi CRISPR */}
-      <div className="relative z-10 w-[340px] sm:w-[540px] md:w-[720px] lg:w-[860px] mx-auto py-5 px-3 text-xs font-bold text-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-2 select-none">
+      {/* 4. Sub-footer Copyright Sesuai Referensi CRISPR */}
+      <div className="relative z-10 w-[340px] sm:w-[540px] md:w-[720px] lg:w-[860px] mx-auto py-4 px-3 text-xs font-bold text-black flex items-center justify-start select-none">
         <p>© 2026 PT Pesta Pora Abadi (Mie Gacoan Cikarang). All rights reserved.</p>
-        <p className="text-neutral-700">
-          Redesign Eksklusif dibuat untuk penikmat kuliner Cikarang.
-        </p>
       </div>
 
       {/* Modal Dialog Pemesanan Online */}

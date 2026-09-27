@@ -36,11 +36,15 @@ export const metadata = {
   authors: [{ name: "Mie Gacoan Cikarang Team" }],
 };
 
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" className={`${outfit.variable} ${fredoka.variable} scroll-smooth`}>
+    <html lang="id" className={`${outfit.variable} ${fredoka.variable}`}>
       <body className="font-sans antialiased bg-gacoan-yellow text-gacoan-black selection:bg-gacoan-black selection:text-gacoan-yellow">
-        {children}
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

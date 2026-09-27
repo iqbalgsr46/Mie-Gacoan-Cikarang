@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ShoppingBag, ArrowUpRight, Flame, MapPin, Phone } from "lucide-react";
 import { navLinks, restaurantInfo } from "@/data/restaurant-data";
 import { OrderModal } from "@/components/ui/order-modal";
@@ -35,19 +36,15 @@ export function SiteHeader() {
             className="flex items-center gap-2 group focus:outline-none"
             aria-label="Mie Gacoan Cikarang - Beranda"
           >
-            {/* Siluet Ikon Minimalis Hitam Khas Gacoan (Mangkok & Sumpit / Burger-style icon) */}
-            <svg
-              className="w-7 h-7 sm:w-8 sm:h-8 text-black transition-transform group-hover:scale-105"
-              viewBox="0 0 32 32"
-              fill="currentColor"
-            >
-              {/* Tutup / Bun Atas / Uap Mie */}
-              <path d="M6 14C6 9.58 9.58 6 16 6C22.42 6 26 9.58 26 14H6Z" />
-              {/* Garis Tengah Isian Gurih */}
-              <rect x="5" y="16" width="22" height="2.5" rx="1.25" />
-              {/* Bagian Bawah / Mangkok */}
-              <rect x="7" y="20.5" width="18" height="3" rx="1.5" />
-            </svg>
+            {/* Logo MIE Hitam Transparan Asli */}
+            <Image
+              src="/images/logo-mie-black.png"
+              alt="Logo Mie Gacoan"
+              width={760}
+              height={684}
+              className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105"
+              priority
+            />
 
             {/* Nama Brand Bold All-Caps */}
             <span className="font-display font-black text-2xl sm:text-3xl tracking-tight text-black leading-none uppercase">
@@ -58,30 +55,30 @@ export function SiteHeader() {
           {/* SISI TENGAH: Kosong Bersih Sesuai Referensi Visual */}
 
           {/* SISI KANAN: Dua Tombol Pill Outline Hitam Sesuai Referensi CRISPR */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            {/* Tombol ORDER (Kapsul Border Tipis Hitam) */}
-            <button
-              onClick={() => setIsOrderModalOpen(true)}
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full border border-black text-black bg-transparent hover:bg-black hover:text-white transition-all duration-200 text-xs sm:text-sm font-bold tracking-wider uppercase focus:outline-none focus:ring-2 focus:ring-black"
-              aria-label="Buka Menu Pemesanan Online"
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* Tombol ORDER (Kapsul Border Tipis Hitam) Menuju Halaman Khusus Take Away */}
+            <Link
+              href="/order"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-black text-black bg-transparent hover:bg-black hover:text-white transition-all duration-200 text-[11px] sm:text-xs font-bold tracking-wider uppercase focus:outline-none focus:ring-2 focus:ring-black"
+              aria-label="Buka Halaman Pemesanan Take Away"
             >
-              <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
+              <ShoppingBag className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.2]" />
               <span>ORDER</span>
-            </button>
+            </Link>
 
             {/* Tombol MENU (Kapsul Border Tipis Hitam) */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`inline-flex items-center gap-2 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full border border-black text-black transition-all duration-200 text-xs sm:text-sm font-bold tracking-wider uppercase focus:outline-none focus:ring-2 focus:ring-black ${
+              className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-black text-black transition-all duration-200 text-[11px] sm:text-xs font-bold tracking-wider uppercase focus:outline-none focus:ring-2 focus:ring-black ${
                 menuOpen ? "bg-black text-white" : "bg-transparent hover:bg-black hover:text-white"
               }`}
               aria-label={menuOpen ? "Tutup Menu Navigasi" : "Buka Menu Navigasi"}
               aria-expanded={menuOpen}
             >
               {menuOpen ? (
-                <X className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
+                <X className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.2]" />
               ) : (
-                <Menu className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
+                <Menu className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.2]" />
               )}
               <span>MENU</span>
             </button>
@@ -131,16 +128,14 @@ export function SiteHeader() {
                   </div>
 
                   <div className="mt-5 pt-4 border-t border-neutral-300">
-                    <button
-                      onClick={() => {
-                        setMenuOpen(false);
-                        setIsOrderModalOpen(true);
-                      }}
+                    <Link
+                      href="/order"
+                      onClick={() => setMenuOpen(false)}
                       className="w-full py-3 rounded-full bg-black text-white hover:bg-gacoan-red text-xs font-black uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
                     >
                       <ShoppingBag className="w-4 h-4" />
                       <span>Pesan Online Sekarang</span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

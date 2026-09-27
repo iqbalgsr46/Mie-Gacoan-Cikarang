@@ -1,94 +1,137 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { Star, Quote, MessageCircle } from "lucide-react";
-import { storyCards } from "@/data/restaurant-data";
 
 export function StoryCommunitySection() {
-  const [activeStoryIndex, setActiveStoryIndex] = useState(0);
-
   return (
     <section
       id="stories"
-      className="relative w-full bg-gacoan-yellow bg-doodle-pattern py-16 sm:py-24 border-b-2 border-gacoan-black overflow-hidden"
+      className="relative w-full pt-12 sm:pt-16 md:pt-20 pb-14 sm:pb-20 overflow-visible"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Headline Sesuai Referensi "EVERY BURGER TELLS A STORY" */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 rounded-full bg-gacoan-black text-gacoan-yellow text-xs font-black uppercase tracking-widest mb-3">
-            SUARA PELANGGAN SETIA CIKARANG
-          </span>
-          <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gacoan-black leading-[0.95] select-none">
-            CERITA SERU <br />
-            <span className="text-gacoan-red">DI TIAP SUAPAN</span>
-          </h2>
-          <p className="mt-3 text-sm sm:text-base font-extrabold text-neutral-800">
-            Dari anak kampus, pekerja kawasan industri Jababeka & MM2100, hingga momen santai akhir pekan bersama keluarga tercinta.
-          </p>
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
+        {/* Doodle Kentang Goreng (French Fries) Sesuai Referensi CRISPR (media_1790447664741.png) */}
+        <div
+          className="absolute -left-2 sm:left-2 md:left-6 -top-6 sm:-top-8 md:-top-10 w-16 sm:w-22 md:w-28 pointer-events-none z-10 select-none"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/doodle-french-fries.png"
+            alt="Doodle Kentang Goreng CRISPR / Gacoan"
+            width={609}
+            height={804}
+            className="w-full h-auto object-contain opacity-90 select-none"
+          />
         </div>
 
-        {/* 3 Vertical Portrait Cards Sesuai Referensi CRISPR */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {storyCards.map((story, idx) => (
-            <div
-              key={story.id}
-              className="group bg-white rounded-3xl border-4 border-gacoan-black shadow-pop-lg overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300"
-            >
-              {/* Foto Potret Vertikal (Squircle Cropping) */}
-              <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-200">
+        {/* Doodle Taco / Food Wrap di Kanan Bawah Sesuai Gambar Referensi */}
+        <div
+          className="absolute -right-4 sm:-right-0 md:right-2 -bottom-16 sm:-bottom-12 md:-bottom-10 w-24 sm:w-32 md:w-40 pointer-events-none z-0 text-neutral-900/80 select-none"
+          aria-hidden="true"
+        >
+          <svg
+            viewBox="0 0 120 100"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-full h-full transform rotate-6"
+          >
+            {/* Kulit taco / wrap melengkung */}
+            <path d="M 15 80 C 15 30, 95 25, 105 80" strokeWidth="2.8" />
+            <path d="M 15 80 C 25 85, 95 85, 105 80" strokeWidth="2.8" />
+            {/* Isian bergelombang / selada */}
+            <path d="M 22 70 Q 30 50, 42 65 T 62 60 T 82 66 T 98 72" strokeWidth="2.2" />
+            <path d="M 28 60 Q 40 40, 52 52 T 74 48 T 92 56" strokeWidth="2.2" />
+            {/* Daging / tekstur isian */}
+            <circle cx="48" cy="62" r="2" fill="currentColor" />
+            <circle cx="68" cy="58" r="2" fill="currentColor" />
+            <circle cx="80" cy="64" r="2" fill="currentColor" />
+          </svg>
+        </div>
+
+        {/* Headline Monumental Disesuaikan Mie Gacoan: "EVERY NOODLE TELLS A STORY" */}
+        <div className="text-center select-none mb-8 sm:mb-12 md:mb-14">
+          <h2
+            style={{ fontFamily: "var(--font-fredoka), 'Fredoka', cursive, sans-serif" }}
+            className="font-black text-2xl min-[360px]:text-3xl sm:text-5xl md:text-6xl uppercase text-black tracking-tight leading-[0.95]"
+          >
+            EVERY NOODLE TELLS
+            <br />
+            A STORY
+          </h2>
+        </div>
+
+        {/* 3 Foto Komunitas Sejajar Sesuai Referensi: Kiri Miring Kiri, Tengah Lurus & Lebih Besar, Kanan Miring Kanan */}
+        <div className="relative w-full max-w-[340px] min-[360px]:max-w-[360px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[820px] mx-auto select-none">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-5 lg:gap-6 items-center">
+            {/* Foto 1: Kiri (Miring ke Kiri -3.5deg, Posisi Sedikit Turun) */}
+            <div className="transform -rotate-[3.5deg] sm:-rotate-[4.2deg] translate-y-2 sm:translate-y-3 md:translate-y-4 hover:rotate-0 hover:scale-105 transition-all duration-300">
+              <div className="relative aspect-[3/4.25] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl shadow-black/15 bg-neutral-900 border border-black/10">
                 <Image
-                  src={story.image}
-                  alt={story.author}
+                  src="/images/story-gacoan-1-hd.png"
+                  alt="Mukbang Mie Gacoan Cikarang"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                  sizes="(max-width: 640px) 33vw, 260px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                {/* Tagline di Dalam Foto */}
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="flex items-center gap-1 mb-1">
-                    {[...Array(story.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-amber-400 text-amber-400"
-                      />
-                    ))}
-                  </div>
-                  <h3 className="font-display font-black text-lg sm:text-xl uppercase leading-tight text-white drop-shadow-sm">
-                    {story.tagline}
-                  </h3>
-                </div>
               </div>
+            </div>
 
-              {/* Ulasan & Identitas */}
-              <div className="p-5 flex flex-col justify-between flex-1 bg-gacoan-surface">
-                <div className="relative">
-                  <Quote className="w-6 h-6 text-gacoan-yellow mb-2 fill-gacoan-yellow" />
-                  <p className="text-xs sm:text-sm font-bold text-neutral-800 leading-relaxed italic">
-                    &ldquo;{story.review}&rdquo;
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t-2 border-neutral-200 flex items-center justify-between">
-                  <span className="font-black text-xs sm:text-sm uppercase text-gacoan-black">
-                    {story.author}
-                  </span>
-                  <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-gacoan-yellow text-gacoan-black border border-gacoan-black">
-                    Verified Customer
-                  </span>
+            {/* Foto 2: Tengah (Lurus 0deg, Lebih Tinggi & Menonjol, dengan Badge Instagram di Kanan Bawah) */}
+            <div className="transform scale-[1.05] sm:scale-[1.08] -translate-y-1 sm:-translate-y-2 z-10 hover:scale-110 transition-all duration-300">
+              <div className="relative aspect-[3/4.25] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-black/25 bg-neutral-900 border border-black/10">
+                <Image
+                  src="/images/story-gacoan-2-hd.png"
+                  alt="Mie Gacoan Pedas Tarikan Mie"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 33vw, 280px"
+                  priority
+                />
+                {/* Badge Logo Instagram di Sudut Kanan Bawah Sesuai Gambar Referensi */}
+                <div className="absolute bottom-2 right-2 sm:bottom-3.5 sm:right-3.5 z-20 pointer-events-none">
+                  <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-4 h-4 sm:w-6 sm:h-6"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeWidth="3" />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Carousel Dots Sesuai Referensi CRISPR */}
-        <div className="mt-10 flex items-center justify-center gap-2">
-          <span className="w-8 h-2.5 rounded-full bg-gacoan-black" />
-          <span className="w-2.5 h-2.5 rounded-full bg-neutral-400 hover:bg-neutral-600 transition-colors cursor-pointer" />
-          <span className="w-2.5 h-2.5 rounded-full bg-neutral-400 hover:bg-neutral-600 transition-colors cursor-pointer" />
+            {/* Foto 3: Kanan (Miring ke Kanan +3.5deg, Posisi Sedikit Turun) */}
+            <div className="transform rotate-[3.5deg] sm:rotate-[4.2deg] translate-y-2 sm:translate-y-3 md:translate-y-4 hover:rotate-0 hover:scale-105 transition-all duration-300">
+              <div className="relative aspect-[3/4.25] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl shadow-black/15 bg-neutral-900 border border-black/10">
+                <Image
+                  src="/images/story-gacoan-3-hd.png"
+                  alt="Menikmati Mie Gacoan Bersama Teman"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 33vw, 260px"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Dots Indikator Pagination Sesuai Gambar Referensi (Dot - Active Pill - Dot - Dot) */}
+          <div className="mt-7 sm:mt-10 md:mt-12 flex items-center justify-center gap-1.5 sm:gap-2">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-neutral-900/35" />
+            <span className="w-5 sm:w-7 h-1.5 sm:h-2 rounded-full bg-black" />
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-neutral-900/35" />
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-neutral-900/35" />
+          </div>
         </div>
       </div>
     </section>

@@ -10,6 +10,7 @@ export function MarqueeBanner({
   className = "",
   speed = "normal",
   tilt = false,
+  tiltReverse = false,
   imageSrc = null,
 }) {
   // Duplikasi item untuk seamless loop
@@ -25,7 +26,8 @@ export function MarqueeBanner({
       <div
         className={cn(
           "w-full bg-black py-2.5 sm:py-3.5 border-y-2 border-black overflow-hidden shadow-lg",
-          tilt && "w-[130%] -ml-[15%] transform -rotate-[5.2deg] sm:-rotate-[5.8deg] shadow-xl",
+          tilt && !tiltReverse && "w-[130%] -ml-[15%] transform -rotate-[5.2deg] sm:-rotate-[5.8deg] shadow-xl",
+          tilt && tiltReverse && "w-[130%] -ml-[15%] transform rotate-[5.2deg] sm:rotate-[5.8deg] shadow-xl",
           className
         )}
       >
